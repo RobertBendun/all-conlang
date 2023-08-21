@@ -17,10 +17,21 @@ td,th {
 	padding: 1ex;
 	border: 1px solid black;
 }
+.metadata {
+	display: flex;
+	justify-content: space-around;
+}
 </style>
 	</head>
 	<body>
-		<h1>ALL</h1>
+		<header>
+			<h1>ALL</h1>
+			<section class="metadata">
+				<time datetime="2023-08-21">2023-08-21</time>
+				<a href="https://bendun.cc">Diana Bendun</a>
+				<div>a <span id="time-to-read"></span> minute read</div>
+			</section>
+		</header>
 		<p>
 			ALL (A Language Language) is a conlang inspired by APL (A Programming Language),
 			created for second Cursed Conlang Circus.
@@ -31,8 +42,9 @@ td,th {
 			We don't have usual linguistic features and instead we write using explicit almost complete binary tree inspired by <a href="https://en.wikipedia.org/wiki/APL_(programming_language)">APL</a>.
 			Additionally it was defined by a programmer who's only knowladge about conlangs is a side effect of intrest in programming languages.
 		</p>
-		<h2>Table of contents</h2>
-		__TOC__
+		<h2 class="skip-toc">Table of contents</h2>
+		<div id="toc">
+		</div>
 		<h2>Name</h2>
 		<p>
 			In ALL the name of the language is <em>alle alle alli</em>, which directly translated means "the most language of languages").
