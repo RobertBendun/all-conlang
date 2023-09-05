@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
+		<meta charset="utf-8" />
 		<title>ALL language</title>
 <style>
 body {
@@ -174,21 +175,27 @@ td,th {
 			</tr>
 			<tr>
 				<td>old</td>
-				<td>ability, trait, capability</td>
-				<td>_ is capable</td>
-				<td>_ can do _, _ is able to _</td>
+				<td>ability, trait, capability, part</td>
+				<td>_ is capable, _ is a part of something more, _ is a subset</td>
+				<td>_ can do _, _ is able to _, _ is part of _, _ allows for _, _ gives ability for _</td>
 			</tr>
 			<tr>
 				<td>nod</td>
 				<td>infirmity, impossibility, negation, denial</td>
 				<td>_ is impossible, _ is false, negation of _</td>
-				<td>_ is mutually exclusive with _, is is impossible to be true when _</td>
+				<td>_ is mutually exclusive with _, is is impossible to be true when _, _ makes it impossible to _</td>
 			</tr>
 			<tr>
 				<td>hod</td>
 				<td>truth</td>
 				<td>_ is true, _ exists</td>
 				<td>_ is true when _</td>
+			</tr>
+			<tr>
+				<td>ma</td>
+				<td>filling, contents, inside</td>
+				<td>_ is inside, _ consists of, _-filled</td>
+				<td>_ is inside of _, _ consists of _</td>
 			</tr>
 		</table>
 		<h3>Combined words</h3>
@@ -203,6 +210,8 @@ td,th {
 			<li>sea - he he oli - more then lots of water</li>
 			<li>ocean - he he he oli - more then more then lake</li>
 			<li>bee - male hole ini - friendly flying insect</li>
+			<li>wing - olde ini oldu hol</li>
+			<li>fat - </li>
 		</ul>
 		<h4>Examples</h4>
 		<ul>
@@ -211,10 +220,12 @@ td,th {
 		<h2>Grammar</h2>
 		<p>As in <a href="https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form">EBNF grammar</a> using notation from linked article.
 		</p>
-		<pre><code>statement = sentance, { sentance };
+		<pre><code>statement = sentance, '.', { sentance, '.' };
 sentance = niladic
-         | (monadic, whitespace, sentance)
-         | (sentance, whitespace, dyadic, whitespace, sentance);
+         | (monadic, whitespace, sentance_or_blank)
+         | (sentance_or_blank, whitespace, dyadic, whitespace, sentance_or_blank);
+
+sentance_or_blank = [ sentance ];
 
 niladic = letters, 'i';
 monadic = letters, 'e';
@@ -251,6 +262,8 @@ letter = 'a'|'o'|'i'|'d'|'n'|'h'|'m';</code></pre>
 			</tr>
 			<tr>
 				<td>Its wings are too small to get its fat little body off the ground.</td>
+				<td>ne olde ini oldu hol</td>
+				<td>small part of insect which makes it fly, makes flight with a big dense body impossible</td>
 			</tr>
 			<tr>
 				<td>The bee, of course, flies anyway because bees don't care what humans think is impossible.</td>
