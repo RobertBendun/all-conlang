@@ -22,6 +22,10 @@ td,th {
 	display: flex;
 	justify-content: space-around;
 }
+
+a, a:link, a:visited {
+	text-decoration: none;
+}
 </style>
 	</head>
 	<body>
@@ -82,32 +86,39 @@ td,th {
 				<th></th>
 				<th>Pronoun (niladic)</th>
 				<th>ALL</th>
+				<th>Symbol</th>
 			</tr>
 			<tr>
-				<td rowspan=3>Singular</td>
+				<th rowspan=3>Singular</th>
 				<td>I</td>
 				<td>m</td>
+				<td>+</td>
 			</tr>
 			<tr>
 				<td>you</td>
 				<td>s</td>
+				<td>-</td>
 			</tr>
 			<tr>
 				<td>he/she/they/it</td>
 				<td>t</td>
+				<td>×</td>
 			</tr>
 			<tr>
-				<td rowspan=3>Plural</td>
+				<th rowspan=3>Plural</th>
 				<td>we</td>
 				<td>am</td>
+				<td>⊕</td>
 			</tr>
 			<tr>
 				<td>you</td>
 				<td>as</td>
+				<td>⊖</td>
 			</tr>
 			<tr>
 				<td>they</td>
 				<td>at</td>
+				<td>⊗</td>
 			</tr>
 		</table>
 		<p>
@@ -119,7 +130,7 @@ td,th {
 		</p>
 		<h3>General</h3>
 		<table>
-			<tr><th rowspan=2>ALL</th><th colspan=3>Examplatory meaning</th></tr>
+			<tr><th rowspan=2>ALL</th><th rowspan=2>Symbol</th><th colspan=3>Examplatory meaning</th></tr>
 			<tr>
 				<th>Niladic</th>
 				<th>Monadic</th>
@@ -127,72 +138,84 @@ td,th {
 			</tr>
 			<tr>
 				<td>all</td>
+				<td><a href="https://en.wikipedia.org/wiki/%E2%88%90">∐</a></td>
 				<td>language, speech, communication, set of rules</td>
 				<td>_ speaks, _ established rules, _ talks</td>
 				<td>_ talks to _, _ communicates with _, _ has rules _</td>
 			</tr>
 			<tr>
 				<td>d</td>
+				<td><a href="https://en.wikipedia.org/wiki/%E2%88%8F">∏</a></td>
 				<td>work</td>
 				<td>_ works, _ produces, _ is a worker</td>
 				<td>_ works on _, _ does _</td>
 			</tr>
 			<tr>
 				<td>mal</td>
+				<td><a href="https://en.wikipedia.org/wiki/%E2%89%97">≗</a></td> <!-- looks like a frog -->
 				<td>friendly animal, life, spirit</td>
 				<td>_ lives, _ is friendly</td>
 				<td>_ pets _</td>
 			</tr>
 			<tr>
 				<td>ol</td>
+				<td>=</td>
 				<td>water, flow</td>
 				<td>_ flows, _ swims</td>
 				<td>_ swims to _</td>
 			</tr>
 			<tr>
 				<td>h</td>
+				<td><a href="https://en.wikipedia.org/wiki/%E2%88%A7">∧</a></td>
 				<td>height, muntain</td>
 				<td>_ is high, _ is large</td>
 				<td>_ is as high as _, _ towers over _</td>
 			</tr>
 			<tr>
 				<td>n</td>
+				<td><a href="https://en.wikipedia.org/wiki/%E2%88%A8">∨</a></td>
 				<td>little, small, hole</td>
 				<td>_ is small, _ is indented</td>
 				<td>_ is as little as _</td>
 			</tr>
 			<tr>
 				<td>hol</td>
+				<td><a href="https://en.wikipedia.org/wiki/Triple_bar">≡</a></td>
 				<td>air, flight</td>
 				<td>_ flies</td>
 				<td>_ flies towards _</td>
 			</tr>
 			<tr>
 				<td>in</td>
+				<td><a href="https://en.wikipedia.org/wiki/%E2%88%99">∙</a></td>
 				<td>insect, spider, bug, little annoing thing</td>
 				<td>_ is scary, _ is annoing</td>
 				<td>_ scared _, _ annoys _</td>
 			</tr>
 			<tr>
 				<td>old</td>
+				<td><a href="https://en.wikipedia.org/wiki/%E2%88%88">∈</a></td>
 				<td>ability, trait, capability, part</td>
 				<td>_ is capable, _ is a part of something more, _ is a subset</td>
 				<td>_ can do _, _ is able to _, _ is part of _, _ allows for _, _ gives ability for _</td>
 			</tr>
 			<tr>
 				<td>nod</td>
+				<td>F</td>
 				<td>infirmity, impossibility, negation, denial</td>
 				<td>_ is impossible, _ is false, negation of _</td>
 				<td>_ is mutually exclusive with _, is is impossible to be true when _, _ makes it impossible to _</td>
 			</tr>
 			<tr>
 				<td>hod</td>
+				<td>T</td>
 				<td>truth</td>
 				<td>_ is true, _ exists</td>
 				<td>_ is true when _</td>
 			</tr>
 			<tr>
 				<td>ma</td>
+				<td><a href="https://en.wikipedia.org/wiki/%E2%8A%82">⊂</a></td>
 				<td>filling, contents, inside</td>
 				<td>_ is inside, _ consists of, _-filled</td>
 				<td>_ is inside of _, _ consists of _</td>
@@ -210,8 +233,7 @@ td,th {
 			<li>sea - he he oli - more then lots of water</li>
 			<li>ocean - he he he oli - more then more then lake</li>
 			<li>bee - male hole ini - friendly flying insect</li>
-			<li>wing - olde ini oldu hol</li>
-			<li>fat - </li>
+			<li>bees wings - olde ini oldu hol</li>
 		</ul>
 		<h4>Examples</h4>
 		<ul>
@@ -262,11 +284,13 @@ letter = 'a'|'o'|'i'|'d'|'n'|'h'|'m';</code></pre>
 			</tr>
 			<tr>
 				<td>Its wings are too small to get its fat little body off the ground.</td>
-				<td>ne olde ini oldu hol</td>
+				<td>ne olde ini oldu hol nodu hole he mai</td>
 				<td>small part of insect which makes it fly, makes flight with a big dense body impossible</td>
 			</tr>
 			<tr>
 				<td>The bee, of course, flies anyway because bees don't care what humans think is impossible.</td>
+				<td>hole male hole ini nodu ame alli</td>
+				<td>Bee flies despite our rules</td>
 			</tr>
 		</table>
 	</body>
