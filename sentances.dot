@@ -1,0 +1,76 @@
+digraph First {
+	label="male hole ini oldu holi nodu hodu alle holi";
+	// male hole ini oldu holi nodu hode alle holi
+	// vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+  //                         nodu
+  //               oldu           hode
+  // male               holi           alle
+  //      hole                              holi
+  //           ini
+
+	r -> rl -> rll -> rllr -> rllrr;
+	     rl -> rlr;
+	r -> rr -> rrr -> rrrr;
+
+	r     [label="nod"];
+	rl    [label="old"];
+	rll   [label="mal"];
+	rllr  [label="hol"];
+	rllrr [label="in"];
+
+	rlr [label="hol"];
+
+	rr   [label="hod"];
+	rrr  [label="all"];
+	rrrr [label="hol"];
+}
+
+digraph Second {
+	label="ne olde ini oldu hol nodu hole he mai";
+	// ne olde ini oldu hol nodu hole he mai
+	// vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+	//                      nodu
+	//             oldu          hole
+	// ne               hol           he
+	//    olde                           mai
+	//         ini
+
+	r -> rl -> rll -> rllr -> rllrr;
+	     rl -> rlr;
+	r -> rr -> rrr -> rrrr;
+
+	r     [label="nod"];
+	rl    [label="old"];
+	rll   [label="n"];
+	rllr  [label="old"];
+	rllrr [label="in"];
+
+	rlr [label="hol"];
+
+	rr   [label="hol"];
+	rrr  [label="h"];
+	rrrr [label="ma"];
+}
+
+digraph Third {
+	label="hole male hole ini nodu ame alli";
+	// hole male hole ini nodu ame alli
+	// vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+	//                    nodu
+	// hole                    ame
+	//      male                   alli
+	//           hole
+	//                ini
+
+	r -> rr -> rrr;
+	r -> rl -> rlr -> rlrr -> rlrrr;
+
+	r   [label="nod"];
+	rr  [label="am"];
+	rrr [label="all"];
+
+	rl    [label="hol"];
+	rlr   [label="mal"];
+	rlrr  [label="hol"];
+	rlrrr [label="in"];
+}

@@ -22,6 +22,7 @@ import bs4
 import re
 from slugify import slugify
 import math
+import subprocess
 
 def inject_table_of_contents(soup: bs4.BeautifulSoup):
     toc = []
@@ -68,6 +69,8 @@ def time_to_read(soup: bs4.BeautifulSoup):
         ttr.replace_with(f"{minutes}")
 
 def main():
+    subprocess.run(["dot", "-Tpng", "-O", "sentances.dot"], check=True)
+
     with open('source.html') as f:
         source = f.read()
 

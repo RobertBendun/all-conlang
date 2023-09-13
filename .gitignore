@@ -1,2 +1,9 @@
 all.html
 venv
+sentances.dot.*
+.cache/
+compile_commands.json
+dot.svg
+tree
+
+
